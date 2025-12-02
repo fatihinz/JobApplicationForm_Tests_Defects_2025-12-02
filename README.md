@@ -6,6 +6,6 @@
 **Defects Found:** 10 (6 High, 4 Medium)  
 **Test Coverage:** 100% required fields, 80% edge cases
 
-Defects reported .docx format
-Each file is one defect
+Defects reported .docx format.
+Each file is one defect.
 Test Cases together in one .xlsx format
