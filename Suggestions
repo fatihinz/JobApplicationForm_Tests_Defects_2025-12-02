@@ -1,0 +1,78 @@
+Stronger data model for name & identity
+
+    Support international names properly
+
+        Allow Unicode letters, spaces, hyphens, apostrophes; do not restrict to A‑Z only, to avoid blocking real names from different locales.
+
+​
+
+Keep clear max length (e.g. 100–150 chars) and trim leading/trailing spaces server‑side rather than over‑validating on the client.
+
+    ​
+
+Simplify structure while keeping mapping options
+
+    Use a single required Full name field for the user, then (optionally) derive or request First/Last only if an ATS or HR system truly requires them.
+
+​
+
+If First/Last must exist, document rules (Latin‑only vs any script) and keep validation consistent across frontend and backend.
+
+    ​
+
+Add semantic and autocomplete hints
+
+    Use proper label + for attributes and autocomplete="name", given-name, family-name for better UX and accessibility.
+
+        ​
+
+Accessibility and keyboard UX
+
+    Make the form fully keyboard‑operable
+
+        Fix tab order so every field and radio group is reachable via Tab; use arrow keys within radio groups, as per WCAG 2.1 guidance.
+
+​
+Ensure visible focus styles (outline) for all interactive elements and sufficient color contrast for labels, errors, and buttons.
+
+Responsive layout & device strategy
+
+    Define and test clear breakpoints
+
+        Mobile: up to ~576 px – one‑column layout, big tap targets, no horizontal scroll.
+
+        Tablet: 577–1024 px – mainly one column with a few two‑column rows (name, phone).
+
+        Desktop: 1025–1440+ px – two‑column layout within a max‑width container (~960–1200 px) to avoid ultra‑wide lines.
+
+    ​
+
+Align controls with device capabilities
+
+    Use appropriate HTML input types: type="email", type="tel", type="url", type="date" so mobile keyboards match the field type.
+
+​
+
+Test on at least 375 px, 768 px, 1024 px, 1366/1440 px to cover common phones, tablets, laptops.
+
+     Risk‑based & quality‑of‑life improvements
+
+    Prioritise tests and monitoring by risk
+
+        Treat submission, CV upload, contact details, and consent/CAPTCHA as P1 flows; optional fields and styling as P2+.
+
+​
+
+Add lightweight analytics on drop‑offs (e.g., users abandoning on CV upload or validation errors) to feed back into UX changes.
+
+    ​
+
+Harden security and robustness
+
+    Validate all input server‑side as well (email, phone, URLs, file type/size) and escape text to prevent XSS.
+
+​
+
+Set sensible rate limits on submissions and ensure CAPTCHA / backend errors produce user‑friendly messages, not generic 500s.  ​
+
+
