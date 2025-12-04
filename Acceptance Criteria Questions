@@ -1,0 +1,26 @@
+1-What is success criteria for form submission (e.g., API response, email confirmation)?
+Reason: Defines the "Definition of Done" for the core user story goal.
+2-What happens if client-side checks pass, but server-side validation fails?
+Reason: Addresses a critical error path and integration risk (front-end/back-end).
+3-What phone number formats are acceptable? Should the tests cover country code variations such as 0048, +48, or both? Are there any minimum or maximum digit limitations for phone numbers?
+Reason: Clarifies complex validation rules for a required field; high defect risk.
+4-Are there specific formats required for the Full Name field? For example, will only Latin characters be accepted, or should the form also allow Cyrillic or Chinese characters?
+Reason: Essential for required field validation and internationalization (i18n) support.
+5-Are there any specific browser versions and devices should be focused on (Firefox, Chrome, Safari, mobile, tablet, laptop)?
+Reason: Defines the test scope and the official supported environment matrix.
+6-Should the test cases focus on manual testing, automation, or both?
+Reason: Establishes the core QA execution strategy and resource planning.
+7-Accessibility: WCAG/keyboard/screen reader? will it be a concern? This impacts things like focus order, screen reader compatibility, and color contrast.
+Reason: Confirms critical non-functional compliance (e.g., legal or mandatory standards).
+8-XSS/SQL injection risks in fields will be tested?
+Reason: Defines the security testing scope and team responsibility.
+9-Any specific edge cases for data picker (e.g., past/future dates, leap years)?
+Reason: Clarifies temporal boundary conditions for the required date field.
+10-For the "LinkedIn profile URL", does the validation require a specific protocol (e.g., must start with http:// or https://), or is [www.linkedin.com/](https://www.linkedin.com/)... sufficient?
+Reason: Focuses on detailed validation for a non-required, specific input type.
+11-Text Area Character Limit: How should the character limit of 100 characters for the "Please provide any additional information about yourself" field be enforced and communicated? (e.g., real-time counter/countdown, error on submission).
+Reason: Addresses the UI/UX feedback mechanism for a character limit.
+12-Does the CV upload tooltip only appear on hover, or does it also appear on focus (for keyboard accessibility)?
+Reason: Minor UI/accessibility detail for a specific component.
+13-Any existing test coverage or regression suite to align with?
+Reason: Information for project planning only; does not change the requirements themselves.
